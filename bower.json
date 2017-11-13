@@ -1,0 +1,30 @@
+{
+  "name": "html_temlpate_gulp",
+  "description": "sass gulp",
+  "main": "index.html",
+  "authors": [
+    "WebDesign Master"
+  ],
+  "license": "ISC",
+  "homepage": "https://github.com/agragregra/optimizedhtml-start-template",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "app/libs/",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery-validation": "git+https://github.com/jquery-validation/jquery-validation#^1.17.0",
+    "owl.carousel": "git+https://github.com/OwlCarousel2/OwlCarousel2#^2.2.1",
+    "font-awesome": "^4.7.0",
+    "inputmask": "git+https://github.com/RobinHerbots/Inputmask#^3.3.10"
+  },
+  "devDependencies": {
+    "jquery-validation": "git+https://github.com/jquery-validation/jquery-validation#^1.17.0",
+    "owl.carousel": "git+https://github.com/OwlCarousel2/OwlCarousel2#^2.2.1",
+    "font-awesome": "^4.7.0",
+    "inputmask": "git+https://github.com/RobinHerbots/Inputmask#^3.3.10"
+  }
+}
