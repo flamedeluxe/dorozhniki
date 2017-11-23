@@ -47,7 +47,15 @@ body
 	font-weight: 400
 	overflow-x: hidden
 	opacity: 1
-
+.not-home
+	.top
+		height: 115px
+	.grid-title
+		text-align: left
+		font-size: 16px
+		padding: 30px 0
+.wrap
+	padding-top: 130px
 .img-responsive
 	display: block
 	max-width: 100%
@@ -191,6 +199,7 @@ body
 
 
 	&-menuRight
+		text-align: right
 		> ul
 			> li
 				display: inline-block
@@ -276,6 +285,16 @@ body
 		line-height: 100%
 		text-transform: uppercase
 		padding: 70px 0
+	&-more
+		text-align: center
+		a
+			border-bottom: 1px solid
+			padding-bottom: 2px
+			color: $black
+			text-decoration: none
+			transition: all .4s ease
+			&:hover,&:focus
+				color: $blue
 	&-etc
 		text-align: right
 		padding: 30px 0
@@ -285,14 +304,29 @@ body
 			color: $black
 			text-transform: uppercase
 			text-decoration: none
+			&:hover,&:focus
+				color: $blue
 	&-item		
-		height: 380px
+		height: 350px
 		display: flex
-		transition: all .5s ease-in-out
+		transition: all .4s ease
 		z-index: 2
 		background-size: cover
-		&:hover
-			
+		position: relative
+		.img
+			width: 100%
+			height: 100%
+			position: absolute
+			top: 0
+			z-index: -1
+			transition-origin: center
+			background-color: rgba(#000, .4)
+			background-size: 100%
+			background-blend-mode: soft-light
+			left: 0
+			transition: all .4s ease
+		&:hover .img
+			background-size: 110%
 		.date
 			font-size: 14px
 			font-weight: 300
@@ -319,14 +353,54 @@ body
 				font-size: 14px
 				&:hover,&:focus
 					text-decoration: none
-					border-bottom: 0
+		&-2col
+			height: auto
+			padding-bottom: 80px
+			.col-xs-12
+				padding-left: 15px
+				padding-right: 15px
+			.img
+				background-color: #62b9e9
+				background-blend-mode: soft-light
+				width: 100%
+				height: 280px
+				background-position: center
+				transition: all .4s ease
+				background-size: 100%
+			.date
+
+			.title
+				line-height: 110%
+				a
+					font-size: 24px
+					color: $black
+					font-weight: 500
+					text-decoration: none
+			.text
+				font-size: 14px
+				line-height: 140%
+			.link
+				float: left
+				width: 50%
+				a
+					color: $black
+					&:hover,&:focus
+						color: $blue
+			.views
+				bottom: 0
+				position: relative
+				float: left
+				width: 50%
+				right: 0
+				text-align: right
+				margin-top: 20px
 		&-1
 			color: #fff
-			background-color: rgba(0, 0, 0, 0.59)
-			background-blend-mode: soft-light
-			padding: 80px 90px 0
+			padding: 20px 90px 0
 			justify-content: center
 			align-items: center
+			.img
+				background-color: rgba(0, 0, 0, 0.59)
 			.title a
 				font-weight: 500
 				color: #fff
@@ -349,13 +423,13 @@ body
 				a
 					color: $black
 		&-3
-			background-color: $blue
-			background-blend-mode: soft-light
 			padding: 30px 90px
+			.img
+				background-color: $blue
 			.date
 				color: #fff
 			.title
-				margin-top: 80px
+				margin-top: 40px
 				a
 					color: #fff
 					text-decoration: none
@@ -368,13 +442,13 @@ body
 			.views
 				color: #fff
 		&-4
-			background-color: rgba(0, 0, 0, 0.59)
-			background-blend-mode: soft-light
 			padding: 30px 20px
+			.img
+				background-color: rgba(0, 0, 0, 0.59)
 			.date
 				color: #fff
 			.title
-				margin-top: 80px
+				margin-top: 40px
 				text-align: center
 				a
 					color: #fff
@@ -401,7 +475,7 @@ body
 			background-size: 100%
 			.date
 				background: #e1e1e1
-				padding: 35px 20px 30px 20px
+				padding: 35px 20px 10px 20px
 			.title
 				background: #e1e1e1
 				margin-top: 0
@@ -420,7 +494,6 @@ body
 			.views
 				color: #fff
 		&-6
-			background-size: cover
 			padding: 30px 30px
 			position: relative
 			height: 320px
@@ -554,7 +627,8 @@ body
 						max-width: 250px
 					&:hover,&:focus
 						text-decoration: none
-
+.banner + .footer-top
+	margin-top: 50px
 
 .footer-bottom
 	background: #fff
@@ -590,7 +664,21 @@ body
 			margin-right: 10px
 		img
 			width: 90px
-	
 
+.newsBlock
+	&-title
+		background: url(../img/news_bg.png)
+		background-attachment: fixed
+		background-blend-mode: soft-light
+		background-color: #ffc800
+		-webkit-text-fill-color: transparent
+		-webkit-background-clip: text
+		font-size: 200px
+		text-transform: uppercase
+		font-weight: bold
+		text-align: center
+		text-shadow: inset 0 2px 2px #000000
+		line-height: 100%
+		
 
 @import "media" // Всегда в конце

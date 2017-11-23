@@ -23,7 +23,7 @@ $(window).on('resize', function(){
 });
 
 $(window).on('scroll', function() {
-	if ($(window).scrollTop() > 500) {
+	if ($(window).scrollTop() > 300) {
 		$('.top').addClass('active');
 	}else {
 		$('.top').removeClass('active');
