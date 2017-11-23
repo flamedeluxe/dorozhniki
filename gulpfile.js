@@ -98,19 +98,20 @@ gulp.task('build', ['removedist', 'imagemin', 'sass', 'js'], function() {
 gulp.task('deploy', function() {
 
 	var conn = ftp.create({
-		host:      'hostname.com',
-		user:      'username',
-		password:  'userpassword',
+		host:      'doroga.wls.agency',
+		user:      'admin_doroga',
+		password:  'Dgt609df',
 		parallel:  10,
 		log: gutil.log
 	});
 
 	var globs = [
-	'dist/**',
-	'dist/.htaccess',
+		'dist/**',
+		'dist/.htaccess',
+		'!dist/*.html'
 	];
 	return gulp.src(globs, {buffer: false})
-	.pipe(conn.dest('/path/to/folder/on/server'));
+	.pipe(conn.dest('/'));
 
 });
 
